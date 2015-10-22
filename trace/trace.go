@@ -32,7 +32,7 @@ func New(w io.Writer) Tracer {
 	return &tracer{out: w}
 }
 
-// Off no trace anymore
-func Off(w io.Writer) Tracer {
+// Off no trace anymore,params are ignored
+func Off(a ...interface{}) Tracer {
 	return &niltracer{}
 }
